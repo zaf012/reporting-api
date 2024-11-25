@@ -1,10 +1,11 @@
-package com.zaferakgul.reporting_api.service;
+package com.zaferakgul.reporting_api.test;
 
 import com.zaferakgul.reporting_api.config.RestTemplateConfig;
 import com.zaferakgul.reporting_api.models.AuthRequest;
 import com.zaferakgul.reporting_api.models.AuthResponse;
 import com.zaferakgul.reporting_api.models.TransactionReportRequest;
 import com.zaferakgul.reporting_api.models.TransactionReportResponse;
+import com.zaferakgul.reporting_api.service.SimpleTransactionReportService;
 import com.zaferakgul.reporting_api.service.base.AuthService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -39,8 +40,8 @@ public class TransactionReportServiceTest {
 
     private SimpleTransactionReportService transactionReportService;
 
-    private static final String TEST_URL = "http://test-api/transactions";
-    private static final String TEST_API_KEY = "test-api-key";
+    private static final String TEST_URL = "https://sandbox-reporting.rpdpymnt.com/api/v3/merchant/user/login";
+    private static final String TEST_API_KEY = "12344321";
     private static final String TEST_TOKEN = "test-token";
 
     @BeforeEach
